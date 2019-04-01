@@ -248,7 +248,8 @@ public class ServerApiLiveTest extends BaseDimensionDataCloudControlApiLiveTest 
    public void testDeleteCustomerImage() {
       boolean deleted = api.getCustomerImageApi().deleteCustomerImage(cloneImageId);
       assertTrue(deleted);
-      assertTrue(api.customerImageDeletedPredicate().apply(cloneImageId), "customer image was not DELETED after timeout");
+      assertTrue(api.customerImageDeletedPredicate().apply(cloneImageId),
+            "customer image was not DELETED after timeout");
    }
 
    @AfterClass(alwaysRun = true)

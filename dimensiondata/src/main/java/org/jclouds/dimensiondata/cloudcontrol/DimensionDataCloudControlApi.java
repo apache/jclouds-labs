@@ -41,68 +41,67 @@ import static org.jclouds.dimensiondata.cloudcontrol.config.DimensionDataCloudCo
 import static org.jclouds.dimensiondata.cloudcontrol.config.DimensionDataCloudControlComputeServiceContextModule.VLAN_NORMAL_PREDICATE;
 import static org.jclouds.dimensiondata.cloudcontrol.config.DimensionDataCloudControlComputeServiceContextModule.VM_TOOLS_RUNNING_PREDICATE;
 
-public interface DimensionDataCloudControlApi extends Closeable
-{
+public interface DimensionDataCloudControlApi extends Closeable {
 
-    @Delegate
-    AccountApi getAccountApi();
+   @Delegate
+   AccountApi getAccountApi();
 
-    @Delegate
-    InfrastructureApi getInfrastructureApi();
+   @Delegate
+   InfrastructureApi getInfrastructureApi();
 
-    @Delegate
-    ServerImageApi getServerImageApi();
+   @Delegate
+   ServerImageApi getServerImageApi();
 
-    @Delegate
-    NetworkApi getNetworkApi();
+   @Delegate
+   NetworkApi getNetworkApi();
 
-    @Delegate
-    ServerApi getServerApi();
+   @Delegate
+   ServerApi getServerApi();
 
-    @Delegate
-    TagApi getTagApi();
+   @Delegate
+   TagApi getTagApi();
 
-    @Delegate
-    CustomerImageApi getCustomerImageApi();
+   @Delegate
+   CustomerImageApi getCustomerImageApi();
 
-    @Provides
-    @Named(VLAN_DELETED_PREDICATE)
-    Predicate<String> vlanDeletedPredicate();
+   @Provides
+   @Named(VLAN_DELETED_PREDICATE)
+   Predicate<String> vlanDeletedPredicate();
 
-    @Provides
-    @Named(NETWORK_DOMAIN_DELETED_PREDICATE)
-    Predicate<String> networkDomainDeletedPredicate();
+   @Provides
+   @Named(NETWORK_DOMAIN_DELETED_PREDICATE)
+   Predicate<String> networkDomainDeletedPredicate();
 
-    @Provides
-    @Named(NETWORK_DOMAIN_NORMAL_PREDICATE)
-    Predicate<String> networkDomainNormalPredicate();
+   @Provides
+   @Named(NETWORK_DOMAIN_NORMAL_PREDICATE)
+   Predicate<String> networkDomainNormalPredicate();
 
-    @Provides
-    @Named(VLAN_NORMAL_PREDICATE)
-    Predicate<String> vlanNormalPredicate();
+   @Provides
+   @Named(VLAN_NORMAL_PREDICATE)
+   Predicate<String> vlanNormalPredicate();
 
-    @Provides
-    @Named(SERVER_STOPPED_PREDICATE)
-    Predicate<String> serverStoppedPredicate();
+   @Provides
+   @Named(SERVER_STOPPED_PREDICATE)
+   Predicate<String> serverStoppedPredicate();
 
-    @Provides
-    @Named(SERVER_DELETED_PREDICATE)
-    Predicate<String> serverDeletedPredicate();
+   @Provides
+   @Named(SERVER_DELETED_PREDICATE)
+   Predicate<String> serverDeletedPredicate();
 
-    @Provides
-    @Named(SERVER_STARTED_PREDICATE)
-    Predicate<String> serverStartedPredicate();
+   @Provides
+   @Named(SERVER_STARTED_PREDICATE)
+   Predicate<String> serverStartedPredicate();
 
-    @Provides
-    @Named(SERVER_NORMAL_PREDICATE)
-    Predicate<String> serverNormalPredicate();
+   @Provides
+   @Named(SERVER_NORMAL_PREDICATE)
+   Predicate<String> serverNormalPredicate();
 
-    @Provides
-    @Named(VM_TOOLS_RUNNING_PREDICATE)
-    Predicate<String> vmToolsRunningPredicate();
+   @Provides
+   @Named(VM_TOOLS_RUNNING_PREDICATE)
+   Predicate<String> vmToolsRunningPredicate();
 
-    @Provides
-    @Named(CUSTOMER_IMAGE_DELETED_PREDICATE)
-    Predicate<String> customerImageDeletedPredicate();
+   @Provides
+   @Named(CUSTOMER_IMAGE_DELETED_PREDICATE)
+   Predicate<String> customerImageDeletedPredicate();
 
 }
