@@ -20,8 +20,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.apache.jclouds.labs</groupId>
-    <artifactId>jclouds-labs</artifactId>
+    <groupId>org.apache.jclouds</groupId>
+    <artifactId>jclouds-project</artifactId>
     <version>2.2.0-SNAPSHOT</version>
   </parent>
 
@@ -43,10 +43,10 @@
 
     <jclouds.osgi.export>org.jclouds.snia.cdmi.v1*;version="${project.version}"</jclouds.osgi.export>
     <jclouds.osgi.import>
-      org.jclouds.blobstore.internal;version="${jclouds.version}",
-      org.jclouds.rest.internal;version="${jclouds.version}",
+      org.jclouds.blobstore.internal;version="${project.parent.version}",
+      org.jclouds.rest.internal;version="${project.parent.version}",
       org.jclouds.labs*;version="${project.version}",
-      org.jclouds*;version="${jclouds.version}",
+      org.jclouds*;version="${project.parent.version}",
       *
     </jclouds.osgi.import>
   </properties>
@@ -55,26 +55,26 @@
     <dependency>
       <groupId>org.apache.jclouds</groupId>
       <artifactId>jclouds-blobstore</artifactId>
-      <version>${jclouds.version}</version>
+      <version>${project.parent.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.jclouds</groupId>
       <artifactId>jclouds-core</artifactId>
-      <version>${jclouds.version}</version>
+      <version>${project.parent.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.jclouds</groupId>
       <artifactId>jclouds-blobstore</artifactId>
-      <version>${jclouds.version}</version>
+      <version>${project.parent.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.jclouds.driver</groupId>
       <artifactId>jclouds-slf4j</artifactId>
-      <version>${jclouds.version}</version>
+      <version>${project.parent.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
