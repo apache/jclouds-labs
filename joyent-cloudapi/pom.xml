@@ -30,7 +30,6 @@
   <artifactId>joyent-cloudapi</artifactId>
   <name>jclouds joyent-cloudapi api</name>
   <description>jclouds components to access an implementation of Joyent SDC</description>
-  <packaging>bundle</packaging>
 
   <properties>
     <test.joyent-cloudapi.endpoint>https://api.joyentcloud.com</test.joyent-cloudapi.endpoint>
@@ -38,13 +37,6 @@
     <test.joyent-cloudapi.build-version />
     <test.joyent-cloudapi.identity>FIXME_IDENTITY</test.joyent-cloudapi.identity>
     <test.joyent-cloudapi.credential>FIXME_CREDENTIALS</test.joyent-cloudapi.credential>
-    <jclouds.osgi.export>org.jclouds.joyent.cloudapi.v6_5*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.rest.internal;version="${jclouds.version}",
-      org.jclouds.labs*;version="${project.version}",
-      org.jclouds*;version="${jclouds.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
 
   <dependencies>

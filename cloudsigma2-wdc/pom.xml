@@ -31,7 +31,6 @@
   <version>2.3.0-SNAPSHOT</version>
   <name>jclouds CloudSigma v2 Washington DC Provider</name>
   <description>ComputeService binding to the CloudSigma datacenter in Washington DC</description>
-  <packaging>bundle</packaging>
 
   <properties>
     <test.cloudsigma2-wdc.endpoint>https://wdc.cloudsigma.com/api/2.0/</test.cloudsigma2-wdc.endpoint>
@@ -41,13 +40,6 @@
     <test.cloudsigma2-wdc.credential>FIXME</test.cloudsigma2-wdc.credential>
     <!-- Ubuntu 14.04 Cloud Image -->
     <test.cloudsigma2-wdc.template>imageId=677f3f9a-840a-4f6e-8a21-987dcb59c81a,loginUser=ubuntu</test.cloudsigma2-wdc.template>
-    <jclouds.osgi.export>org.jclouds.cloudsigma2*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.compute.internal;version="${project.version}",
-      org.jclouds.rest.internal;version="${project.version}",
-      org.jclouds*;version="${project.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
 
   <dependencies>

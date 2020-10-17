@@ -1,0 +1,2 @@
+Export-Package: \
+    org.jclouds.aliyun.ecs.*;version="${project.version}";-noimport:=true

@@ -31,7 +31,6 @@
   <version>2.3.0-SNAPSHOT</version>
   <name>jclouds CloudSigma v2 Miami Provider</name>
   <description>ComputeService binding to the CloudSigma datacenter in Miami</description>
-  <packaging>bundle</packaging>
 
   <properties>
     <test.cloudsigma2-mia.endpoint>https://mia.cloudsigma.com/api/2.0/</test.cloudsigma2-mia.endpoint>
@@ -41,13 +40,6 @@
     <test.cloudsigma2-mia.credential>FIXME</test.cloudsigma2-mia.credential>
     <!-- Ubuntu 14.04 Cloud Image -->
     <test.cloudsigma2-mia.template>imageId=976368fb-cb6f-43d8-9632-4d19911b9304,loginUser=ubuntu</test.cloudsigma2-mia.template>
-    <jclouds.osgi.export>org.jclouds.cloudsigma2*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.compute.internal;version="${project.version}",
-      org.jclouds.rest.internal;version="${project.version}",
-      org.jclouds*;version="${project.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
 
   <dependencies>

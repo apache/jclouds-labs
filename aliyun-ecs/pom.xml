@@ -28,7 +28,6 @@
     <artifactId>aliyun-ecs</artifactId>
     <name>jclouds Alibaba Elastic Compute Service API</name>
     <description>jclouds components to access an implementation of Alibaba Elastic Compute Service</description>
-    <packaging>bundle</packaging>
 
     <properties>
         <test.aliyun-ecs.endpoint>https://ecs.aliyuncs.com/</test.aliyun-ecs.endpoint>
@@ -36,9 +35,7 @@
         <test.aliyun-ecs.credential>FIXME_CREDENTIALS</test.aliyun-ecs.credential>
         <test.aliyun-ecs.template/>
 
-        <jclouds.osgi.export>org.jclouds.aliyun.ecs.*;version="${project.version}"</jclouds.osgi.export>
-        <jclouds.osgi.import>org.jclouds*;version="${project.version}",*</jclouds.osgi.import>
-        <jclouds.osgi.dynamic>*</jclouds.osgi.dynamic>
+
     </properties>
 
     <dependencies>

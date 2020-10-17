@@ -30,7 +30,6 @@
   <artifactId>cdmi</artifactId>
   <name>jclouds cdmi api</name>
   <description>jclouds components to access an implementation of SNIA CDMI</description>
-  <packaging>bundle</packaging>
 
   <properties>
     <test.cdmi.endpoint>http://localhost:8080</test.cdmi.endpoint>
@@ -40,15 +39,6 @@
     <test.cdmi.credential>FIXME_CREDENTIALS</test.cdmi.credential>
     <jclouds.blobstore.httpstream.url>FIXME_HTTPURL</jclouds.blobstore.httpstream.url>
     <jclouds.blobstore.httpstream.md5>FIXME_HTTPMD5</jclouds.blobstore.httpstream.md5>
-
-    <jclouds.osgi.export>org.jclouds.snia.cdmi.v1*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.blobstore.internal;version="${jclouds.version}",
-      org.jclouds.rest.internal;version="${jclouds.version}",
-      org.jclouds.labs*;version="${project.version}",
-      org.jclouds*;version="${jclouds.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
 
   <dependencies>

@@ -32,20 +32,12 @@
     <artifactId>dimensiondata-cloudcontrol</artifactId>
     <name>jclouds Dimension Data CloudControl API</name>
     <description>jclouds components to access an implementation of Dimension Data CloudControl</description>
-    <packaging>bundle</packaging>
 
     <properties>
         <test.dimensiondata-cloudcontrol.api-version>2.4</test.dimensiondata-cloudcontrol.api-version>
         <test.dimensiondata-cloudcontrol.endpoint>FIXME</test.dimensiondata-cloudcontrol.endpoint>
         <test.dimensiondata-cloudcontrol.identity>FIXME</test.dimensiondata-cloudcontrol.identity>
         <test.dimensiondata-cloudcontrol.credential>FIXME</test.dimensiondata-cloudcontrol.credential>
-        <jclouds.osgi.export>org.jclouds.dimensiondata*;version="${project.version}"</jclouds.osgi.export>
-        <jclouds.osgi.import>
-            org.jclouds.compute.internal;version="${project.version}",
-            org.jclouds.rest.internal;version="${project.version}",
-            org.jclouds*;version="${project.version}",
-            *
-        </jclouds.osgi.import>
     </properties>
 
     <dependencies>

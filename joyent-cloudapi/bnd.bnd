@@ -1,0 +1,2 @@
+Export-Package: \
+    org.jclouds.joyent.cloudapi.v6_5.*;version="${project.version}";-noimport:=true

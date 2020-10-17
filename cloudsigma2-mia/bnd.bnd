@@ -1,0 +1,2 @@
+Export-Package: \
+    org.jclouds.cloudsigma2.mia.*;version="${project.version}";-noimport:=true
