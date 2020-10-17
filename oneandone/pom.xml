@@ -29,19 +29,12 @@
     <artifactId>oneandone</artifactId>
     <name>jclouds OneAndOne REST api</name>
     <description>jclouds components to access an implementation of OneAndOne</description>
-    <packaging>bundle</packaging>
-    
+
     <properties>
         <test.oneandone.endpoint>https://cloudpanel-api.1and1.com/v1/</test.oneandone.endpoint>
         <test.oneandone.identity>token</test.oneandone.identity>
         <test.oneandone.credential>token</test.oneandone.credential>
         <test.oneandone.api-version>1.0</test.oneandone.api-version>
-        <jclouds.osgi.export>org.jclouds.oneandone*;version="${project.version}"</jclouds.osgi.export>
-        <jclouds.osgi.import>
-            org.jclouds.labs*;version="${project.version}",
-            org.jclouds*;version="${jclouds.version}",
-            *
-        </jclouds.osgi.import>
     </properties>
 
     <dependencies>

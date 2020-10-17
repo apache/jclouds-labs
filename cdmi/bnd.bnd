@@ -1,0 +1,2 @@
+Export-Package: \
+    org.jclouds.snia.cdmi.v1.*;version="${project.version}";-noimport:=true

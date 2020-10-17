@@ -31,7 +31,6 @@
   <version>2.3.0-SNAPSHOT</version>
   <name>jclouds CloudSigma v2 Honolulu Provider</name>
   <description>ComputeService binding to the CloudSigma datacenter in Honolulu</description>
-  <packaging>bundle</packaging>
 
   <properties>
     <test.cloudsigma2-hnl.endpoint>https://hnl.cloudsigma.com/api/2.0/</test.cloudsigma2-hnl.endpoint>
@@ -41,13 +40,6 @@
     <test.cloudsigma2-hnl.credential>FIXME</test.cloudsigma2-hnl.credential>
     <!-- Ubuntu 14.04 Cloud Image -->
     <test.cloudsigma2-hnl.template>imageId=9e0400ab-d911-4232-971d-f552330b61be,loginUser=ubuntu</test.cloudsigma2-hnl.template>
-    <jclouds.osgi.export>org.jclouds.cloudsigma2*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.compute.internal;version="${project.version}",
-      org.jclouds.rest.internal;version="${project.version}",
-      org.jclouds*;version="${project.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
 
   <dependencies>

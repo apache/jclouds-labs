@@ -29,20 +29,13 @@
   <artifactId>abiquo</artifactId>
   <name>jclouds Abiquo api</name>
   <description>jclouds components to access an implementation of Abiquo</description>
-  <packaging>bundle</packaging>
-  
+
   <properties>
     <test.abiquo.endpoint>http://localhost/api</test.abiquo.endpoint>
     <test.abiquo.identity>FIXME</test.abiquo.identity>
     <test.abiquo.credential>FIXME</test.abiquo.credential>
     <test.abiquo.api-version />
     <test.abiquo.template />
-    <jclouds.osgi.export>org.jclouds.abiquo*;version="${project.version}"</jclouds.osgi.export>
-    <jclouds.osgi.import>
-      org.jclouds.labs*;version="${project.version}",
-      org.jclouds*;version="${jclouds.version}",
-      *
-    </jclouds.osgi.import>
   </properties>
   
   <dependencies>

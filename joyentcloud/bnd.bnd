@@ -1,0 +1,2 @@
+Export-Package: \
+    org.jclouds.joyent.joyentcloud.*;version="${project.version}";-noimport:=true

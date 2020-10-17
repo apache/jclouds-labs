@@ -26,7 +26,7 @@ import java.util.Map;
 import org.apache.jclouds.oneandone.rest.domain.SingleServerAppliance;
 import org.apache.jclouds.oneandone.rest.domain.Types;
 import org.jclouds.json.Json;
-import org.jclouds.json.gson.internal.LinkedTreeMap;
+import com.google.gson.internal.LinkedTreeMap;
 
 import com.google.common.reflect.TypeToken;
 import com.google.inject.Inject;
