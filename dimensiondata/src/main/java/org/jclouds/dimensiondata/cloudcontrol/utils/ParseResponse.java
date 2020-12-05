@@ -30,6 +30,7 @@ import org.jclouds.logging.Logger;
 
 import javax.annotation.Resource;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import static org.jclouds.http.HttpUtils.releasePayload;
 
@@ -48,7 +49,7 @@ public class ParseResponse implements Function<HttpResponse, String> {
    public String apply(HttpResponse from) {
       Response response = null;
       try (InputStream gson = from.getPayload().openStream()) {
-         response = json.fromJson(gson, TypeLiteral.get(Response.class).getType());
+         response = json.fromJson(gson, StandardCharsets.UTF_8, TypeLiteral.get(Response.class).getType());
          return tryFindInfoPropertyValue(response);
       } catch (Exception e) {
          StringBuilder message = new StringBuilder();

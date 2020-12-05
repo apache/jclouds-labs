@@ -27,6 +27,7 @@ import org.jclouds.http.handlers.BackoffLimitedRetryHandler;
 import org.jclouds.json.Json;
 
 import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 import static org.jclouds.http.HttpUtils.closeClientButKeepContentStream;
@@ -56,7 +57,7 @@ public class ECSErrorRetryHandler implements HttpRetryHandler {
          // Content can be null in the case of HEAD requests
          if (response.getPayload() != null) {
             closeClientButKeepContentStream(response);
-            ErrorMessage error = json.fromJson(new ByteArrayInputStream(content), ErrorMessage.class);
+            ErrorMessage error = json.fromJson(new ByteArrayInputStream(content), StandardCharsets.UTF_8, ErrorMessage.class);
             if (error != null) {
                return shouldRetryRequestOnError(command, response, error);
             }
