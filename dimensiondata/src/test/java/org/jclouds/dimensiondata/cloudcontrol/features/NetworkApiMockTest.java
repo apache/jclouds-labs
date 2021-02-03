@@ -17,8 +17,8 @@
 package org.jclouds.dimensiondata.cloudcontrol.features;
 
 import com.google.common.collect.Lists;
-import com.squareup.okhttp.mockwebserver.MockResponse;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.jclouds.dimensiondata.cloudcontrol.domain.FirewallRule;
 import org.jclouds.dimensiondata.cloudcontrol.domain.FirewallRuleTarget;
 import org.jclouds.dimensiondata.cloudcontrol.domain.IpRange;

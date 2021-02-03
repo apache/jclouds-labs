@@ -16,7 +16,7 @@
  */
 package org.apache.jclouds.profitbricks.rest.compute.function;
 
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import org.apache.jclouds.profitbricks.rest.internal.BaseProfitBricksApiMockTest;
 import org.jclouds.compute.domain.Volume;
 import org.jclouds.compute.domain.VolumeBuilder;

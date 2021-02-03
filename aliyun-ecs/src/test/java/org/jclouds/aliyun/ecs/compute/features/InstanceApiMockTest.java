@@ -17,7 +17,7 @@
 package org.jclouds.aliyun.ecs.compute.features;
 
 import com.google.common.collect.Iterables;
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import org.jclouds.aliyun.ecs.compute.internal.BaseECSComputeServiceApiMockTest;
 import org.jclouds.aliyun.ecs.domain.AvailableZone;
 import org.jclouds.aliyun.ecs.domain.Instance;

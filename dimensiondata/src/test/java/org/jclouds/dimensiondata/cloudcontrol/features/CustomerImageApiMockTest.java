@@ -16,7 +16,7 @@
  */
 package org.jclouds.dimensiondata.cloudcontrol.features;
 
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import org.jclouds.dimensiondata.cloudcontrol.internal.BaseAccountAwareCloudControlMockTest;
 import org.testng.annotations.Test;
 

@@ -23,8 +23,8 @@ import com.google.common.io.Resources;
 import static com.google.common.util.concurrent.MoreExecutors.newDirectExecutorService;
 import com.google.gson.JsonParser;
 import com.google.inject.Module;
-import com.squareup.okhttp.mockwebserver.MockWebServer;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.MockWebServer;
+import okhttp3.mockwebserver.RecordedRequest;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Set;
@@ -53,7 +53,7 @@ public class BaseOneAndOneApiMockTest {
    @BeforeMethod
    public void start() throws IOException {
       server = new MockWebServer();
-      server.play();
+      server.start();
       ApiContext<OneAndOneApi> ctx = ContextBuilder.newBuilder("oneandone")
               .credentials("token", "token")
               .endpoint(url(""))
@@ -75,7 +75,7 @@ public class BaseOneAndOneApiMockTest {
    }
 
    protected String url(String path) {
-      return server.getUrl(path).toString();
+      return server.url(path).toString();
    }
 
    protected String stringFromResource(String resourceName) {
@@ -104,7 +104,7 @@ public class BaseOneAndOneApiMockTest {
       String expectedContentType = "application/json";
 
       assertEquals(request.getHeader("Content-Type"), expectedContentType);
-      assertEquals(parser.parse(new String(request.getBody(), Charsets.UTF_8)), parser.parse(json));
+      assertEquals(parser.parse(request.getBody().readUtf8()), parser.parse(json));
       return request;
    }
 }
