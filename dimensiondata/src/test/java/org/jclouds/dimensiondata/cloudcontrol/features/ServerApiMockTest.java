@@ -17,7 +17,7 @@
 package org.jclouds.dimensiondata.cloudcontrol.features;
 
 import com.google.common.collect.Lists;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.jclouds.dimensiondata.cloudcontrol.domain.CPU;
 import org.jclouds.dimensiondata.cloudcontrol.domain.Disk;
 import org.jclouds.dimensiondata.cloudcontrol.domain.NIC;

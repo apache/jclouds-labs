@@ -16,7 +16,7 @@
  */
 package org.jclouds.dimensiondata.cloudcontrol.internal;
 
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.testng.annotations.BeforeMethod;
 
 import javax.ws.rs.HttpMethod;

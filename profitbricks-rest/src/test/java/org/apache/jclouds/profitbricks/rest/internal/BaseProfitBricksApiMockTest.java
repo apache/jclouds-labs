@@ -38,9 +38,9 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Resources;
 import com.google.gson.JsonParser;
 import com.google.inject.Module;
-import com.squareup.okhttp.mockwebserver.MockResponse;
-import com.squareup.okhttp.mockwebserver.MockWebServer;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockWebServer;
+import okhttp3.mockwebserver.RecordedRequest;
 
 public class BaseProfitBricksApiMockTest {
 
@@ -58,7 +58,7 @@ public class BaseProfitBricksApiMockTest {
    @BeforeMethod
    public void start() throws IOException {
       server = new MockWebServer();
-      server.play();
+      server.start();
       ApiContext<ProfitBricksApi> ctx = ContextBuilder.newBuilder("profitbricks-rest")
 	      .credentials("username", "password")
 	      .endpoint(url(""))
@@ -79,7 +79,7 @@ public class BaseProfitBricksApiMockTest {
    }
 
    protected String url(String path) {
-      return server.getUrl(path).toString();
+      return server.url(path).toString();
    }
    
    protected MockResponse response204() {
@@ -119,7 +119,7 @@ public class BaseProfitBricksApiMockTest {
          expectedContentType = "application/json";
       
       assertEquals(request.getHeader("Content-Type"), expectedContentType);
-      assertEquals(parser.parse(new String(request.getBody(), Charsets.UTF_8)), parser.parse(json));
+      assertEquals(parser.parse(request.getBody().readUtf8()), parser.parse(json));
       return request;
    }
 }

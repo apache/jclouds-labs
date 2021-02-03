@@ -23,9 +23,9 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Resources;
 import com.google.gson.JsonParser;
 import com.google.inject.Module;
-import com.squareup.okhttp.mockwebserver.MockResponse;
-import com.squareup.okhttp.mockwebserver.MockWebServer;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockWebServer;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.jclouds.ContextBuilder;
 import org.jclouds.concurrent.config.ExecutorServiceModule;
 import org.jclouds.dimensiondata.cloudcontrol.DimensionDataCloudControlApi;
@@ -79,7 +79,7 @@ public class BaseDimensionDataCloudControlMockTest implements IHookable {
    @BeforeMethod
    public void start() throws IOException {
       server = new MockWebServer();
-      server.play();
+      server.start();
       ctx = ContextBuilder.newBuilder(DimensionDataCloudControlProviderMetadata.builder().build()).credentials("", "")
             .endpoint(url("")).modules(modules).overrides(new Properties()).build();
       json = ctx.utils().injector().getInstance(Json.class);
@@ -135,7 +135,7 @@ public class BaseDimensionDataCloudControlMockTest implements IHookable {
    }
 
    protected String url(String path) {
-      return server.getUrl(path).toString();
+      return server.url(path).toString();
    }
 
    protected MockResponse jsonResponse(String resource) {
@@ -236,9 +236,9 @@ public class BaseDimensionDataCloudControlMockTest implements IHookable {
       return uriBuilder;
    }
 
-   public byte[] payloadFromResource(String resource) {
+   public String payloadFromResource(String resource) {
       try {
-         return toStringAndClose(getClass().getResourceAsStream(resource)).getBytes(Charsets.UTF_8);
+         return toStringAndClose(getClass().getResourceAsStream(resource));
       } catch (IOException e) {
          throw Throwables.propagate(e);
       }

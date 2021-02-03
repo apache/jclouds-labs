@@ -16,7 +16,7 @@
  */
 package org.apache.jclouds.oneandone.rest.features;
 
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import org.apache.jclouds.oneandone.rest.domain.BlockStorage;
 import org.apache.jclouds.oneandone.rest.domain.options.GenericQueryOptions;
 import org.apache.jclouds.oneandone.rest.internal.BaseOneAndOneApiMockTest;

@@ -17,7 +17,7 @@
 package org.apache.jclouds.profitbricks.rest.compute.config;
 
 import com.google.common.base.Predicate;
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import java.util.concurrent.TimeUnit;
 import org.apache.jclouds.profitbricks.rest.compute.config.ProfitBricksComputeServiceContextModule.DataCenterProvisioningStatePredicate;
 import org.apache.jclouds.profitbricks.rest.compute.config.ProfitBricksComputeServiceContextModule.ServerStatusPredicate;

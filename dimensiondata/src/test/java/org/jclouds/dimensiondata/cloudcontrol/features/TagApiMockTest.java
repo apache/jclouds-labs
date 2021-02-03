@@ -17,7 +17,7 @@
 package org.jclouds.dimensiondata.cloudcontrol.features;
 
 import com.google.common.collect.ImmutableList;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.jclouds.dimensiondata.cloudcontrol.domain.Tag;
 import org.jclouds.dimensiondata.cloudcontrol.domain.TagInfo;
 import org.jclouds.dimensiondata.cloudcontrol.domain.TagKey;

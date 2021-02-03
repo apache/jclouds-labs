@@ -16,7 +16,7 @@
  */
 package org.apache.jclouds.profitbricks.rest.features;
 
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import java.util.List;
 import org.apache.jclouds.profitbricks.rest.domain.IpBlock;
 import org.apache.jclouds.profitbricks.rest.domain.Location;

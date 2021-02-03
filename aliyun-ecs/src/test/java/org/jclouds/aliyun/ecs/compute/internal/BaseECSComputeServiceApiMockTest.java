@@ -23,9 +23,9 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.io.Resources;
 import com.google.inject.Module;
-import com.squareup.okhttp.mockwebserver.MockResponse;
-import com.squareup.okhttp.mockwebserver.MockWebServer;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import okhttp3.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockWebServer;
+import okhttp3.mockwebserver.RecordedRequest;
 import org.jclouds.ContextBuilder;
 import org.jclouds.aliyun.ecs.ECSComputeServiceApi;
 import org.jclouds.aliyun.ecs.ECSComputeServiceProviderMetadata;
@@ -61,7 +61,7 @@ public class BaseECSComputeServiceApiMockTest {
    @BeforeMethod
    public void start() throws IOException {
       server = new MockWebServer();
-      server.play();
+      server.start();
       ctx = ContextBuilder.newBuilder("alibaba-ecs").credentials("user", "password").endpoint(url("")).modules(modules)
             .overrides(overrides()).build();
       json = ctx.utils().injector().getInstance(Json.class);
@@ -81,7 +81,7 @@ public class BaseECSComputeServiceApiMockTest {
    }
 
    protected String url(String path) {
-      return server.getUrl(path).toString();
+      return server.url(path).toString();
    }
 
    protected MockResponse jsonResponse(String resource) {

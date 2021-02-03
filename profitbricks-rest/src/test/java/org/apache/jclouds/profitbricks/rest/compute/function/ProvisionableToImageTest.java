@@ -18,7 +18,7 @@ package org.apache.jclouds.profitbricks.rest.compute.function;
 
 import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableSet;
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import java.util.Set;
 import org.apache.jclouds.profitbricks.rest.internal.BaseProfitBricksApiMockTest;
 import org.jclouds.compute.domain.Image;

@@ -16,7 +16,7 @@
  */
 package org.apache.jclouds.oneandone.rest.compute.function;
 
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import org.apache.jclouds.oneandone.rest.domain.SingleServerAppliance;
 import org.apache.jclouds.oneandone.rest.internal.BaseOneAndOneApiMockTest;
 import org.jclouds.compute.domain.Image;

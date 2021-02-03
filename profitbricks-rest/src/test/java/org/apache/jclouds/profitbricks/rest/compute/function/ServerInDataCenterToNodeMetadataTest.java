@@ -23,7 +23,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.name.Names;
-import com.squareup.okhttp.mockwebserver.MockResponse;
+import okhttp3.mockwebserver.MockResponse;
 import java.util.Set;
 import org.apache.jclouds.profitbricks.rest.ProfitBricksApi;
 import org.apache.jclouds.profitbricks.rest.ProfitBricksApiMetadata;
