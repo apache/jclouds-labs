@@ -33,7 +33,7 @@ public class VagrantWireLoggerTest {
    @Test
    public void testWireLogger() {
       HttpWire httpWire = EasyMock.createMock(HttpWire.class);
-      Capture<InputStream> wireInCapture = new Capture<InputStream>();
+      Capture<InputStream> wireInCapture = Capture.newInstance();
       EasyMock.expect(httpWire.input(EasyMock.capture(wireInCapture))).andReturn(null);
       EasyMock.expect(httpWire.output(OUT1)).andReturn(OUT1);
       EasyMock.expect(httpWire.output(OUT2 + OUT3)).andReturn(OUT2 + OUT3);
